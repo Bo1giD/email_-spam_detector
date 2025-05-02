@@ -1,45 +1,60 @@
+# gui.py
 import tkinter as tk
 from tkinter import messagebox
+import re
+from typing import TypedDict
 from model import predict_spam
 
-#Callback function for button
+class SpamInput(TypedDict):
+    sender: str
+    subject: str
+    body: str
+
+def is_valid_email(email: str) -> bool:
+    email_regex = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    return bool(re.match(email_regex, email))
+
 def check_spam():
-    text = input_box.get("1.0", tk.END).strip()
-    if not text:
-        messagebox.showwarning("Input Error", "Please enter email or SMS content.")
+    sender = sender_entry.get().strip()
+    subject = subject_entry.get().strip()
+    body = body_text.get("1.0", tk.END).strip()
+
+    # Input validation
+    if not (sender and subject and body):
+        messagebox.showerror("Validation Error", "All fields must be filled out.")
         return
-    label, confidence = predict_spam(text)
+    if not is_valid_email(sender):
+        messagebox.showerror("Validation Error", "Please enter a valid sender email address.")
+        return
+
+    email_input: SpamInput = {"sender": sender, "subject": subject, "body": body}
+    label, confidence = predict_spam(email_input)
     result_label.config(text=f"Classification: {label}")
     confidence_label.config(text=f"Confidence: {confidence}%")
 
-#GUI setup
 root = tk.Tk()
-root.title("Spam Email Detector")
-root.geometry("400x300")
+root.title("Spam Email Detection")
+root.geometry("500x400")
 root.resizable(False, False)
 
-#Header
-header = tk.Label(root, text="Spam Email Detection", font=("Helvetica", 14, "bold"))
-header.pack(pady=10)
+tk.Label(root, text="Sender Email:", font=("Helvetica", 10)).pack(pady=5)
+sender_entry = tk.Entry(root, width=50)
+sender_entry.pack()
 
-#Text input field
-input_box = tk.Text(root, height=6, width=40, font=("Helvetica", 10))
-input_box.pack(pady=5)
-input_box.insert("1.0", "")
-input_box.insert_placeholder = lambda: input_box.insert("1.0", "Enter the email content here...")
-input_box.bind("<FocusIn>", lambda event: input_box.delete("1.0", tk.END) if input_box.get("1.0", tk.END).strip() == "Enter the email content here..." else None)
-input_box.bind("<FocusOut>", lambda event: input_box.insert_placeholder() if not input_box.get("1.0", tk.END).strip() else None)
-input_box.insert_placeholder()
+tk.Label(root, text="Subject:", font=("Helvetica", 10)).pack(pady=5)
+subject_entry = tk.Entry(root, width=50)
+subject_entry.pack()
 
-#Classify button
-check_button = tk.Button(root, text="Classify", command=check_spam, font=("Inter", 10))
-check_button.pack(pady=10)
+tk.Label(root, text="Email Body:", font=("Helvetica", 10)).pack(pady=5)
+body_text = tk.Text(root, height=8, width=60)
+body_text.pack()
 
-#Result labels
-result_label = tk.Label(root, text="Classification: ", font=("Inter", 10))
+tk.Button(root, text="Classify", command=check_spam, font=("Helvetica", 10)).pack(pady=10)
+
+result_label = tk.Label(root, text="Classification: ", font=("Helvetica", 10, "bold"))
 result_label.pack()
 
-confidence_label = tk.Label(root, text="Confidence: ", font=("Inter", 10))
+confidence_label = tk.Label(root, text="Confidence: ", font=("Helvetica", 10, "bold"))
 confidence_label.pack()
 
 root.mainloop()
