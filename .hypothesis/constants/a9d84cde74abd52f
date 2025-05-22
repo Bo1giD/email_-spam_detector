@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\joblib\externals\loky\backend\context.py
+# hypothesis_version: 6.131.22
+
+[100000, '#', ',', 'LOKY_MAX_CPU_COUNT', 'Node,NumberOfCores', 'cpu_affinity', 'darwin', 'fork', 'forkserver', 'linux', 'loky', 'loky_init_main', 'lscpu --parse=core', 'max', 'not found', 'sched_getaffinity', 'spawn', 'win32']

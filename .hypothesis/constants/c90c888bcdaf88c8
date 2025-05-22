@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\joblib\logger.py
+# hypothesis_version: 6.131.22
+
+[0.1, 60.0, '\n---%s---\n', ' %5.1fs', '%.1fs, %.1fmin', '%4.1fmin', '%s: %.2fs, %.1f min', '%s: %s', '.%i', '.1', '[%s]: %s', 'a', 'joblib', 'joblib.log', 'numpy', 'w', 'win']

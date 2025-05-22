@@ -1,0 +1,4 @@
+# file: C:\Users\matth\Documents\GitHub\email_-spam_detector\model.py
+# hypothesis_version: 6.131.22
+
+[0.3, 0.6, 95.0, 100, 'Likely Spam', 'Not Spam', 'Spam', 'account', 'account suspended', 'bank', 'bank details', 'body', 'click', 'click here', 'free prize', 'http[s]?://|www\\.', 'login', 'login immediately', 'password', 'reset your password', 'send money', 'sender', 'subject', 'unsubscribe', 'update your info', 'urgent', 'verify', 'verify your account', 'you have won']

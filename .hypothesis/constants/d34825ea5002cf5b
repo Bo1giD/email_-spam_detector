@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\numpy\random\_pickle.py
+# hypothesis_version: 6.131.22
+
+['MT19937', 'PCG64', 'PCG64DXSM', 'Philox', 'SFC64']

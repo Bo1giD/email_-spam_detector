@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\fixes.py
+# hypothesis_version: 6.131.22
+
+['0.3.16', '1.10.999', '1.11.0', '1.12', '1.12.0', '1.22', '1.25.0', '1.4', '1.8', '1.9.0', '2.2', '3', 'P', 'architecture', 'atol', 'coo', 'copy', 'csr', 'data', 'dia_array', 'internal_api', 'legacy', 'linear', 'neoversen1', 'openblas', 'polars', 'rtol', 'slots', 'tol', 'version', 'wasm32', 'wasm64']

@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\joblib\externals\loky\backend\reduction.py
+# hypothesis_version: 6.131.22
+
+['LOKY_PICKLER', 'cloudpickle', 'dispatch_table', 'dump', 'dumps', 'duplicate', 'loads', 'pickle', 'pypy_version_info', 'register', 'set_loky_pickler', 'win32']

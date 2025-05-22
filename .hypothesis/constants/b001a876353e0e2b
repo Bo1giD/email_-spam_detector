@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\pandas\compat\_constants.py
+# hypothesis_version: 6.131.22
+
+['HOST_GNU_TYPE', 'IS64', 'ISMUSL', 'PY310', 'PY311', 'PY312', 'PYPY', 'PyPy', 'musl']

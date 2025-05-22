@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\pandas\io\orc.py
+# hypothesis_version: 6.131.22
+
+['10.0.1', 'pyarrow', 'pyarrow.fs', 'pyarrow.orc', 'rb', 'wb']

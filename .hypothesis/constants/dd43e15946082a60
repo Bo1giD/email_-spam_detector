@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\_joblib.py
+# hypothesis_version: 6.131.22
+
+['Memory', 'Parallel', '__version__', 'cpu_count', 'delayed', 'dump', 'effective_n_jobs', 'hash', 'ignore', 'joblib', 'load', 'logger', 'parallel_backend']

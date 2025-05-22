@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py
+# hypothesis_version: 6.131.22
+
+['No label returned', 'T', 'Too many indexers', 'Too many indices', 'at', 'b', 'boolean', 'dtype', 'i', 'iat', 'ignore', 'iloc', 'index', 'integer', 'key', 'loc', 'ndim', 'not applicable', 'numpy_dtype']

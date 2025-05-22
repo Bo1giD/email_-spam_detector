@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\scipy\_lib\array_api_compat\numpy\linalg.py
+# hypothesis_version: 6.131.22
+
+['DD->D', 'call', 'dd->d', 'ignore', 'solve', 'vector_norm']

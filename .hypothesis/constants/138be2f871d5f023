@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\pytz\exceptions.py
+# hypothesis_version: 6.131.22
+
+['AmbiguousTimeError', 'InvalidTimeError', 'NonExistentTimeError', 'UnknownTimeZoneError']

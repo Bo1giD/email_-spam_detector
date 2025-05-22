@@ -1,0 +1,4 @@
+# file: C:\Users\matth\AppData\Roaming\Python\Python313\site-packages\numpy\lib\_version.py
+# hypothesis_version: 6.131.22
+
+['.', '.dev', 'NumpyVersion', 'NumpyVersion(%s)', '\\d+\\.\\d+\\.\\d+', 'a\\d', 'b\\d', 'final', 'numpy.lib', 'rc\\d']
