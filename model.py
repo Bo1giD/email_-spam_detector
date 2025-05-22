@@ -13,7 +13,7 @@ extra_features = joblib.load("saved_model/feature_names.pkl")
 PHISHING_KEYWORDS = [
     "verify your account", "bank details", "click here", "login immediately",
     "update your info", "confirm your identity", "free prize", "reset your password",
-    "urgent", "unsubscribe", "you have won", "account suspended"
+    "urgent", "unsubscribe", "you have won", "account suspended", "send money", 
 ]
 
 def contains_phishing_keywords(text: str) -> bool:
@@ -29,6 +29,9 @@ def extract_binary_features(text: str) -> list:
 
 def predict_spam(email_input: Dict[str, str]) -> Tuple[str, float]:
     full_text = f"{email_input['sender']} {email_input['subject']} {email_input['body']}"
+
+    if not email_input["sender"].strip() or not email_input["subject"].strip() or not email_input["body"].strip():
+        raise ValueError("All fields must be filled out.")
 
     # Rule-based phishing override
     if contains_phishing_keywords(full_text):
